@@ -9,13 +9,13 @@ public class IngresarUsuario {
     private static Scanner sc = new Scanner(System.in);
     private static List<Usuario> usuarios = new ArrayList<>();
 
-    public static void ingresarUsuario() {
+    public static Usuario ingresarUsuario() {
 
         usuarios = UsuarioData.cargarUsuarios();
         String clave = pedirClave();
         String correo = pedirCorreo();
         Usuario user = verificarUsuario(correo,clave,usuarios);
-        System.out.println(user);
+        return user;
 
     }
 

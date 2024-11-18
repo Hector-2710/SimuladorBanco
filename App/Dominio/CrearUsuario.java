@@ -8,7 +8,7 @@ public class CrearUsuario {
     private static Scanner sc = new Scanner(System.in);
     private static List<Usuario> usuarios = new ArrayList<>();
 
-    public static void crearUsuario() {
+    public static Usuario crearUsuario() {
 
         usuarios = UsuarioData.cargarUsuarios();
         String nombre = pedirNombre();
@@ -19,6 +19,7 @@ public class CrearUsuario {
         Usuario usuario = new Usuario(tarjeta, correo, clave, nombre);
         usuarios.add(usuario);
         UsuarioData.guardarUsuarios(usuarios);
+        return  usuario;
     }
 
     public static Tarjeta crearTarjeta() {

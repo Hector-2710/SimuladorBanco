@@ -1,4 +1,5 @@
 package Dominio;
+import javax.swing.plaf.PanelUI;
 import java.util.Scanner;
 
 public class Login {
@@ -11,12 +12,16 @@ public class Login {
 
         switch (opcion){
             case 1:
-                CrearUsuario.crearUsuario();
+                Usuario user = CrearUsuario.crearUsuario();
                 System.out.println("Usuario Creado con exito");
+                Menu.menu(user);
                 break;
             case 2:
-                IngresarUsuario.ingresarUsuario();
-                System.out.println("Usuario ingresado con exito");
+                Usuario user1 = IngresarUsuario.ingresarUsuario();
+                if (user1 == null){
+                    break;
+                }
+                Menu.menu(user1);
                 break;
         }
 

@@ -15,25 +15,18 @@ public class Tarjeta {
         return numero;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
+
 
     public int getPin() {
         return pin;
     }
 
-    public void setPin(int pin) {
-        this.pin = pin;
-    }
+
 
     public int getSaldo() {
         return saldo;
     }
 
-    public void setSaldo(int saldo) {
-        this.saldo = saldo;
-    }
 
     @Override
     public String toString() {
