@@ -1,13 +1,12 @@
 package main;
-
-import Dominio.CrearUsuario;
+import Dominio.Login;
 
 public class Main {
 
   public static void main(String [] args ){
-    System.out.println("---WELCOME---");
-    CrearUsuario.crearUsuario();
-  }
 
-}//CLASS
+    Login.realizarLogin();
+
+  }
+}
 

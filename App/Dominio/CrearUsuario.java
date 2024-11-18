@@ -1,47 +1,50 @@
 package Dominio;
 import java.util.Scanner;
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
+
 public class CrearUsuario {
+
     private static Scanner sc = new Scanner(System.in);
-    private static Random random = new Random();
+    private static List<Usuario> usuarios = new ArrayList<>();
 
+    public static void crearUsuario() {
 
-    public static void crearUsuario(){
+        usuarios = UsuarioData.cargarUsuarios();
         String nombre = pedirNombre();
         String clave = pedirClave();
         String correo = pedirCorreo();
         Tarjeta tarjeta = crearTarjeta();
-        Usuario usuario = new Usuario(tarjeta,correo,clave,nombre);
 
-        System.out.println(usuario);
-
+        Usuario usuario = new Usuario(tarjeta, correo, clave, nombre);
+        usuarios.add(usuario);
+        UsuarioData.guardarUsuarios(usuarios);
     }
-    public static Tarjeta crearTarjeta( ){
+
+    public static Tarjeta crearTarjeta() {
         int numero = (int)(Math.random() * 90000000) + 10000000;
         int pin = pedirPin();
         int saldo = 0;
-
-        Tarjeta tarjeta = new Tarjeta(saldo,pin,saldo);
-        return tarjeta;
+        return new Tarjeta(numero, pin, saldo);
     }
 
-    public static String pedirNombre(){
-        System.out.println("ingrese su nombre");
-        return sc.nextLine();
-
-    }
-    public static String pedirClave(){
-        System.out.println("ingrese su clave");
+    public static String pedirNombre() {
+        System.out.println("Ingrese su nombre");
         return sc.nextLine();
     }
 
-    public static String pedirCorreo(){
-        System.out.println("ingrese su correo");
+    public static String pedirClave() {
+        System.out.println("Ingrese su clave");
         return sc.nextLine();
     }
 
-    public static int pedirPin(){
-        System.out.println("ingrese su pin");
+    public static String pedirCorreo() {
+        System.out.println("Ingrese su correo");
+        return sc.nextLine();
+    }
+
+    public static int pedirPin() {
+        System.out.println("Ingrese su pin");
         return sc.nextInt();
     }
 }
