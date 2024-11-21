@@ -1,2 +1,16 @@
 asdsasad,assdadas,asdsad,36895454,32,0
 Hector,nico1234,h.rosales01@ufromail.cl,61679872,7890,0
+Felipe,felipeloco,felipeloco@ufromail.cl,12155732,2345,0
+Felipe,felipeloco,felipeloco@ufromail.cl,75941417,2345,0
+Felipe,felipeloco,felipeloco@ufromail.cl,76253422,2345,0
+Felipe,felipeloco,felipeloco@ufromail.cl,19767716,2345,0
+Felipe,felipeloco,felipeloco@ufromail.cl,35725235,2345,0
+Felipe,felipeloco,felipeloco@ufromail.cl,57058843,2345,0
+Felipe,felipeloco,felipeloco@ufromail.cl,86327968,2345,0
+Felipe,felipeloco,felipeloco@ufromail.cl,98713104,2345,0
+Felipe,felipeloco,felipeloco@ufromail.cl,94287889,435,0
+Felipe,felipeloco,felipeloco@ufromail.cl,28643181,435,0
+felipe,felipeloco,felipeloco@ufromial.cl,45201686,5678,0
+felipe,felipeloco,felipeloco@ufromial.cl,36452432,5678,0
+felipe,felipeloco,felipeloco@ufromial.cl,28362488,5678,0
+matias,matiloco,matiloxosisi,95223322,983598,0

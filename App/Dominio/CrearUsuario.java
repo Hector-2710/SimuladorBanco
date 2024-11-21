@@ -8,44 +8,20 @@ public class CrearUsuario {
     private static Scanner sc = new Scanner(System.in);
     private static List<Usuario> usuarios = new ArrayList<>();
 
-    public static Usuario crearUsuario() {
+    public static Usuario crearUsuario(String nombre, String clave, String correo,Tarjeta tarjeta) {
 
         usuarios = UsuarioData.cargarUsuarios();
-        String nombre = pedirNombre();
-        String clave = pedirClave();
-        String correo = pedirCorreo();
-        Tarjeta tarjeta = crearTarjeta();
-
         Usuario usuario = new Usuario(tarjeta, correo, clave, nombre);
         usuarios.add(usuario);
         UsuarioData.guardarUsuarios(usuarios);
+        System.out.println("usuario creado con exitoo");
         return  usuario;
     }
 
-    public static Tarjeta crearTarjeta() {
+    public static Tarjeta crearTarjeta(int pin) {
         int numero = (int)(Math.random() * 90000000) + 10000000;
-        int pin = pedirPin();
         int saldo = 0;
         return new Tarjeta(numero, pin, saldo);
     }
 
-    public static String pedirNombre() {
-        System.out.println("Ingrese su nombre");
-        return sc.nextLine();
-    }
-
-    public static String pedirClave() {
-        System.out.println("Ingrese su clave");
-        return sc.nextLine();
-    }
-
-    public static String pedirCorreo() {
-        System.out.println("Ingrese su correo");
-        return sc.nextLine();
-    }
-
-    public static int pedirPin() {
-        System.out.println("Ingrese su pin");
-        return sc.nextInt();
-    }
 }

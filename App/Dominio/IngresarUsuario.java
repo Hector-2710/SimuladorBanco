@@ -14,14 +14,15 @@ public class IngresarUsuario {
         usuarios = UsuarioData.cargarUsuarios();
         String clave = pedirClave();
         String correo = pedirCorreo();
-        Usuario user = verificarUsuario(correo,clave,usuarios);
+        Usuario user = verificarUsuario(correo,clave);
         return user;
 
     }
 
-    public static Usuario verificarUsuario(String correo,String clave, List <Usuario> users){
+    public static Usuario verificarUsuario(String correo,String clave){
 
-        for (Usuario user: users) {
+        usuarios = UsuarioData.cargarUsuarios();
+        for (Usuario user: usuarios) {
             if (user.getCorreo().equals(correo) && user.getClave().equals(clave)){
                 System.out.println("usuario encontrado");
                 return user;
